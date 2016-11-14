@@ -14,14 +14,20 @@ else
     display('No file is opened !!!');
 end
 
-
 % % generates random numbers
+
+% load accidents
+% X = hwydata(:,14); %Population of states
+% Y = hwydata(:,4); %Accidents per state
+
+%           OR
+
 % sigma = 8;
 % X =-5.0:0.5:5.0;
 % Y = X.^2 + sigma*randn(1,length(X));
 % X = X';
 % Y = Y';
-degree = 8;
+degree = 3;
 displayPlot = 'Y'; % 'Y' : display data and fitted function 
 [Parameters, errFunction] = PolynomialRegression(X,Y,degree,displayPlot)
 
