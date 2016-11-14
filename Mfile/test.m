@@ -6,10 +6,12 @@ clc
 if ((FilterIndex~=0) && (length(FileName)~=0) && (length(PathName)~=0))
 
     openedFile = csvread(strcat(PathName,FileName));
+	% first column
     X = openedFile(:,1);
-    Y = openedFile(:,2);
+    % second column
+	Y = openedFile(:,2);
 else
-    display('no file is ');
+    display('No file is opened !!!');
 end
 
 
